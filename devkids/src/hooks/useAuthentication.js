@@ -28,7 +28,7 @@ export const useAuthentication = () => {
         }
     }
 
-
+    // register
     const createUser = async (data) => {
         checkFirstCancelled()
 
@@ -48,7 +48,7 @@ export const useAuthentication = () => {
             })
 
             
-            setLoading(false)
+            setLoading(false);
 
             return user
 
@@ -67,10 +67,52 @@ export const useAuthentication = () => {
             }else {
                 systemErrorMessage = "Ocorreu um erro. Tente novamente mais tarde"
             }
-            setLoading(false)
+            setLoading(false);
             setError(systemErrorMessage);
         }
     };
+
+    // logout
+
+    const logout = () => {
+
+        checkFirstCancelled();
+        
+        signOut(auth);
+    };
+
+    //login
+
+    const login = async(data) => {
+
+
+        checkFirstCancelled()
+
+        setLoading(true)
+        setError(false)
+
+        try{
+
+            await signInWithEmailAndPassword(auth, data.email, data.password)
+            setLoading(false);
+
+        } catch(error) {
+
+
+            let systemErrorMessage;
+
+            if(error.message.includes("user-not-found")) {
+                systemErrorMessage = "Usuário não encontrado!"
+            } else if(error.message.includes("wrong-password")) {
+                systemErrorMessage = "Senha incorreta"
+            } else {
+                systemErrorMessage = "Ocorreu um erro inesperado. por favor, tente novamente mais tarde"
+            }
+            setError(systemErrorMessage)
+            setLoading(false);
+
+        }
+    }
 
     useEffect(() => {
         return () => setCancelled(true);
@@ -81,5 +123,7 @@ export const useAuthentication = () => {
         createUser,
         error,
         loading,
+        logout,
+        login,
     };
 };

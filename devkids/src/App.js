@@ -16,7 +16,9 @@ import About from './pages/About/About';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Register from './pages/Register/Register';
-import Login from './pages/Login/login';
+import Login from './pages/Login/Login';
+import Aprendizado from './pages/Aprendizado/Aprendizado';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 //pages
 
@@ -43,15 +45,17 @@ function App() {
 
   return (
     <div className="App">
-     <AuthProvider value={user}>
+     <AuthProvider value={{ user }}> 
      <BrowserRouter>
       <Navbar/>
         <div className='container'>
           <Routes>
             <Route path='/home' element={<Home/>}/>
             <Route path='/about' element={<About/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/register' element={<Register/>}/>
+            <Route path='/login' element={!user ? <Login/> : <Navigate to="/home"/>}/>
+            <Route path='/registrar' element={!user ? <Register/> : <Navigate to="/home"/>}/>
+            <Route path='/aprendizado' element={user ? <Aprendizado/> : <Navigate to="/login"/>}/>
+            <Route path='/Dashboard' element={user ? <Dashboard/> : <Navigate to="/login"/>}/>
           </Routes>
         </div>
       <Footer/>
