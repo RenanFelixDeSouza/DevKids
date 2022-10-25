@@ -1,0 +1,44 @@
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 2vw;
+	padding: 0 10vw;
+}
+
+
+
+.imagem{
+	width: 340px;
+	height: 340px;
+	box-shadow: 5px 5px 5px rgb(235, 128, 128);
+	flex-grow: .3;
+	filter: grayscale(100%);
+	transition: transform 1s linear;
+
+}
+
+img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+.imagem:hover{
+	transform: scale(1.1);
+	filter: none;
+	border: 10px solid rgba(72, 47, 229, 0.439);
+}
+
+
+.textCenter {
+	text-align: center;
+	font-size: 40px;
+}
+
+span.textCente {
+	position:absolute;
+  top: 100%;
+  left: 34%;
+}

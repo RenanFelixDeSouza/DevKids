@@ -4,15 +4,23 @@ import { useAuthentication } from "../hooks/useAuthentication";
 
 import { useAuthValue } from "../context/AuthContent";
 
-import styles from "./Navbar.module.css";
+import styles from './Navbar.module.css'; 
+
+
+
+//themedark/white
+
 
 
 const NavBar = () => {
     const { user } = useAuthValue();
     const {logout} = useAuthentication();
+    
+
+    //trocar tema
 
     return (
-        <nav className={styles.navbar}>
+        <nav className={styles.NavBar}>
             <NavLink to="/" className={styles.brand}>
                 Dev <span>Kids</span>
             </NavLink>
@@ -83,5 +91,7 @@ const NavBar = () => {
         </nav>
     );
 };
+
+
 
 export default NavBar;
