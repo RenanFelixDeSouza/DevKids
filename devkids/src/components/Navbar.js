@@ -21,7 +21,7 @@ const NavBar = () => {
 
     return (
         <nav className={styles.NavBar}>
-            <NavLink to="/" className={styles.brand}>
+            <NavLink to="/home" className={styles.brand}>
                 Dev <span>Kids</span>
             </NavLink>
 
@@ -84,7 +84,7 @@ const NavBar = () => {
                 </li>
                 {user && (
                     <li>
-                        <button onClick={logout}>Sair</button>
+                        <button onClick={logout} className={styles.sair}>Sair</button>
                     </li>
                 )}
             </ul>

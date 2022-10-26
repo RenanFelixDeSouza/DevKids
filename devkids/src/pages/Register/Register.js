@@ -1,6 +1,5 @@
 import styles from './Register.module.css';
 import { useState, useEffect } from 'react';
-import { useActionData } from 'react-router-dom';
 import { useAuthentication } from '../../hooks/useAuthentication';
 
 

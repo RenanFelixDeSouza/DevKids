@@ -1,13 +1,8 @@
 .footer {
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #edf3f6;
+    display: block;
     bottom: 0;
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    opacity: 0%;
+        position: fixed;
+        width: 100%;
+        text-align: center;
+    background-color: #676666;
 }

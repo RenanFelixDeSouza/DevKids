@@ -43,18 +43,7 @@ textarea::placeholder {
   color: #AAA;
 }
 
-.btn {
-  background-color: #1a8918;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  border-radius:10px;
-  width: 120px;
-  font-weight: bold;
-  border: none;
-  padding: 10px 15px;
-  font-size: 1em;
-}
+
 
 
 .btn.btn-dark {
@@ -71,10 +60,7 @@ textarea::placeholder {
 }
 
 
-.btn:hover{
-  background-color: #0F730c;
-  color: white;
-}
+
 
 .btn.btn-outline:hover {
   background-color: black;

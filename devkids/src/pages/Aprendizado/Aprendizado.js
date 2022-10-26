@@ -35,11 +35,49 @@ const Aprendizado = () => {
 
         <a href='/jogoquiz' className={styles.imagem}>
           <img src={quiz} alt="img" ></img>
-          <span className={styles.textCente}>jogos de perguntas e respostas</span>
+          <span className={styles.textCente}>Quiz programação</span>
         </a>
 
       </div>
-    </div>
+
+
+      <h2 className={styles.textCenter2}>Video Aula</h2>
+
+      <div className={styles.container2}>
+
+      <a href='/' className={styles.imagem}>
+          <img src={bela} alt="img" ></img>
+          <span className={styles.textCente}>video tal</span>
+        </a>
+
+        <a href='/' className={styles.imagem}>
+          <img src={bela} alt="img" ></img>
+          <span className={styles.textCente}>video tal</span>
+        </a>
+
+        <a href='/' className={styles.imagem}>
+          <img src={bela} alt="img" ></img>
+          <span className={styles.textCente}>video tal</span>
+        </a>
+
+        <a href='/' className={styles.imagem}>
+          <img src={bela} alt="img" ></img>
+          <span className={styles.textCente}>video tal</span>
+        </a>
+
+        <a href='/' className={styles.imagem}>
+          <img src={bela} alt="img" ></img>
+          <span className={styles.textCente}>video tal</span>
+        </a>
+
+        <a href='/' className={styles.imagem}>
+          <img src={bela} alt="img" ></img>
+          <span className={styles.textCente}>video tal</span>
+        </a>
+
+        </div>
+<p className={styles.espacoFooter}>fgds</p>
+      </div>
   )
 }
 

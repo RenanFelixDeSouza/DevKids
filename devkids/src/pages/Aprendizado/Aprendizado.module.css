@@ -6,12 +6,22 @@
 	padding: 0 10vw;
 }
 
+.container2{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 2vw;
+	padding: 0 10vw;
+	margin-top: 6em;
+	margin-bottom: 10em;
+}
+
 
 
 .imagem{
 	width: 340px;
 	height: 340px;
-	box-shadow: 5px 5px 5px rgb(235, 128, 128);
+	box-shadow: 5px 5px 5px  #676666;
 	flex-grow: .3;
 	filter: grayscale(100%);
 	transition: transform 1s linear;
@@ -28,17 +38,32 @@ img{
 .imagem:hover{
 	transform: scale(1.1);
 	filter: none;
-	border: 10px solid rgba(72, 47, 229, 0.439);
+	border: 10px solid #b854e8;
 }
 
 
 .textCenter {
 	text-align: center;
 	font-size: 40px;
+	margin-bottom: 1.5em;
+	margin-top: 1.5rem;
 }
 
 span.textCente {
+	text-align: center;
 	position:absolute;
   top: 100%;
-  left: 34%;
+  left: 25%;
+  right: 25%;
+}
+
+.textCenter2 {
+	text-align: center;
+	font-size: 40px;
+	margin-top: 4rem;
+}
+
+.espacoFooter {
+	color:red;
+	opacity: 0%;
 }

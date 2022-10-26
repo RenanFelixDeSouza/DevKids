@@ -19,7 +19,7 @@ import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 import Aprendizado from './pages/Aprendizado/Aprendizado';
 import Dashboard from './pages/Dashboard/Dashboard';
-import JogoQuiz from './games/JogoQuiz';
+import JogoQuiz from './games/jogoquiz/JogoQuiz';
 //pages
 
 function App() {
